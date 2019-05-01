@@ -18,7 +18,7 @@ function saz(){
     echo "remote host: ${REMOTE}"
     echo "remote directory: ${REMOTE_DIR}"
     ssh ${REMOTE} "zip -r ${ZIPFILE} ${REMOTE_DIR} > /dev/null;"
-    scp ${REMOTE}:${ZIPFILE} ${TO}
+    scp ${REMOTE}:${ZIPFILE} ${ZIPFILE}
     ssh ${REMOTE} "rm ${ZIPFILE}"
     unzip ${ZIPFILE} > /dev/null
     rm ${ZIPFILE}
